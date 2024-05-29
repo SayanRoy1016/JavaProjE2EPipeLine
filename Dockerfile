@@ -2,7 +2,7 @@ FROM openjdk:17-jdk-alpine
 
 WORKDIR /app
 
-COPY /target/*.jar ./java.jar
+COPY /*.jar ./java.jar
 
 # Expose the port the app runs on
 EXPOSE 8080
