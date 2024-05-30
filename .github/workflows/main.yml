@@ -25,3 +25,8 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/image_push_dochub:${{ github.sha }}
           file: Dockerfile
+
+      - name: Deploy to Azure Web App
+        with:
+            app-name: ${{secrets.WEB_APP_NAME}}
+            images: ${{ secrets.DOCKERHUB_USERNAME }}/image_push_dochub:${{ github.sha }}
