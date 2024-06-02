@@ -38,3 +38,4 @@ jobs:
         with:
             app-name: ${{secrets.WEB_APP_NAME}}
             images: ${{ secrets.DOCKERHUB_USERNAME }}/image_push_dochub:${{ github.sha }}
+            publish-profile: ${{ secrets.AZURE_WEB_APP_PUBLISH_PROFILE}}
